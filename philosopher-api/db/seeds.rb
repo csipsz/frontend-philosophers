@@ -10,8 +10,8 @@ Branch.create(name: "Metaphysics", description: " the study of what is really re
 Branch.create(name: "Epistemology", description: "the study of knowledge. In particular, epistemology is the study of the nature, scope, and limits of human knowledge")
 Branch.create(name: "Idealism", description: "German idealism was a philosophical movement that emerged in Germany in the late 18th and early 19th centuries. It developed out of the work of Immanuel Kant in the 1780s and 1790s, and was closely linked both with Romanticism and the revolutionary politics of the Enlightenment. The best-known thinkers in the movement, besides Kant, were Johann Gottlieb Fichte, Friedrich Wilhelm Joseph Schelling, Georg Wilhelm Friedrich Hegel, and the proponents of Jena Romanticism (Friedrich Hölderlin, Novalis, and Karl Wilhelm Friedrich Schlegel). August Ludwig Hülsen, Friedrich Heinrich Jacobi, Gottlob Ernst Schulze, Karl Leonhard Reinhold, Salomon Maimon, Friedrich Schleiermacher, and Arthur Schopenhauer also made major contributions.")
 
-# Philosopher.create(name:"Immanuel Kant", nationality:"Prussian", birthdate:"1724/04/22", branch_id:3)
-# Philosopher.create(name:"Georg Wilhelm Friedrich Hegel ", nationality:"German", birthdate:"1770/08/27", branch_id:3)
-# Philosopher.create(name:"Socrates", nationality:"Greek", birthdate:"470 BC", branch_id:1)
+Philosopher.create(work: "created idealism", name:"Immanuel Kant", nationality:"Prussian", birthdate:"1724/04/22", branch_id:3)
+Philosopher.create(work: "thought his system is much better than Kant's", name:"Georg Wilhelm Friedrich Hegel ", nationality:"German", birthdate:"1770/08/27", branch_id:3)
+Philosopher.create(work: "shit on everyone at the agora", name:"Socrates", nationality:"Greek", birthdate:"470 BC", branch_id:1)
 
-# Note.create(content: "Plato's teacher", philosopher_id: 3)
+Note.create(content: "Plato's teacher", philosopher_id: 3)

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_12_144017) do
+ActiveRecord::Schema.define(version: 2020_09_12_150117) do
 
   create_table "branches", force: :cascade do |t|
     t.string "name"
@@ -19,4 +19,25 @@ ActiveRecord::Schema.define(version: 2020_09_12_144017) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "notes", force: :cascade do |t|
+    t.text "content"
+    t.integer "philosopher_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["philosopher_id"], name: "index_notes_on_philosopher_id"
+  end
+
+  create_table "philosophers", force: :cascade do |t|
+    t.string "name"
+    t.string "nationality"
+    t.date "birthdate"
+    t.text "work"
+    t.integer "branch_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["branch_id"], name: "index_philosophers_on_branch_id"
+  end
+
+  add_foreign_key "notes", "philosophers"
+  add_foreign_key "philosophers", "branches"
 end
