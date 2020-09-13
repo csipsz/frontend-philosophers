@@ -7,9 +7,6 @@ let notes = () => document.querySelector("#notes")
 
 API.loadBranches()
 
-
-
-
 noteForm().addEventListener("submit", addNote)
 notes().addEventListener("click", fetchNotes)
 

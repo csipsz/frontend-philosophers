@@ -5,10 +5,9 @@ class Branch {
         this.name = name
         this.description = description
         this.id = id
-        this.philosophers = philosophers.map(philosopher => new Philosopher(philosopher))
+        this.philosophers = philosophers.map(philosopher => new Philosopher(philosopher.name, philosopher.nationality, philosopher.work, philosopher.id, philosopher.birthdate))
         Branch.all.push(this)
     }
-
 
     static createBranches(data) {
         data.forEach(data => {
@@ -16,10 +15,9 @@ class Branch {
         }
     )}
 
-
-        static displayBranches(){
-            Branch.all.forEach(branch => branch.display());
-        }
+    static displayBranches(){
+        Branch.all.forEach(branch => branch.display());
+    }
 
     
     display(){
