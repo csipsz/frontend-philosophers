@@ -13,31 +13,33 @@ function loadBranches(){
 loadBranches()
 
 function displayBranches(branches){
-    branches.forEach(branch => {
-        const h2 = document.createElement("h2")
-        const p = document.createElement("p")
-        const list = document.createElement("ul")
-        h2.textContent = branch.name 
-        p.textContent = branch.description 
-        branch.philosophers.forEach(philosopher => {
-            const li = document.createElement('h3')
-            li.textContent = philosopher.name 
-            list.appendChild(li)
-            const opt = document.createElement('option')
-            opt.innerText = philosopher.name 
-            opt.value = philosopher.id
-            dropDown().appendChild(opt)
-        })
-        branchDiv().appendChild(h2)
-        branchDiv().appendChild(p)
-        branchDiv().appendChild(list)
-
-    });
+    branches.forEach(branch => displayBranch(branch));
 }
 
+function displayBranch(branch){
+    const h2 = document.createElement("h2")
+    const p = document.createElement("p")
+    const list = document.createElement("ul")
+    h2.textContent = branch.name 
+    p.textContent = branch.description 
+    branch.philosophers.forEach(philosopher => displayPhilosopher(philosopher))
+    branchDiv().appendChild(h2)
+    branchDiv().appendChild(p)
+    branchDiv().appendChild(list)
+
+
+    function displayPhilosopher(philosopher){
+        const li = document.createElement('h3')
+        li.textContent = philosopher.name 
+        list.appendChild(li)
+        const opt = document.createElement('option')
+        opt.innerText = philosopher.name 
+        opt.value = philosopher.id
+        dropDown().appendChild(opt)}
+}
+
+
 noteForm().addEventListener("submit", addNote)
-
-
 
 
 function addNote(e){
@@ -58,10 +60,12 @@ function addNote(e){
     .then(resp => resp.json())
     .then(obj => {
         new Note(obj.content, obj.philosopher)
+        displayNote(obj)
+        clearForm()
         //debugger
-        let p = document.createElement('p')
-        p.innerText = obj.content 
-        noteCont().appendChild(p)
+        //let p = document.createElement('p')
+        //p.innerText = obj.content 
+        //noteCont().appendChild(p)
     })
 }
 
@@ -79,14 +83,20 @@ function fetchNotes(){
 }
 
 function displayNotes(notes){
-    notes.forEach(note => {
-        let p = document.createElement("p")
-        p.innerText = note.content + ` about ${note.philosopher.name}`
-        noteCont().appendChild(p)
-    })
-
+    notes.forEach(note => displayNote(note))
 }
 
 function clearNotes(){
     noteCont().innerHTML = "" 
+}
+
+function clearForm(){
+    document.querySelector("#note-content").value = ""
+    document.querySelector("#philosopher-dropdown").value = "Select Philosopher"
+}
+
+function displayNote(note){
+    let p = document.createElement("p")
+    p.innerText = note.content + ` about ${note.philosopher.name}`
+    noteCont().appendChild(p)
 }
