@@ -25,7 +25,7 @@ class Note {
 
 
     static createNotes(data) {
-        data.forEach(data => {
+       data.forEach(data => {
             let note = new Note(data.content, data.philosopher, data.id)
         }
         )};

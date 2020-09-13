@@ -4,39 +4,11 @@ let noteForm = () => document.querySelector('#note-submit')
 let noteCont = () => document.querySelector("#note-container")
 let notes = () => document.querySelector("#notes")
 
-function loadBranches(){
-    fetch("http://localhost:3000/branches")
-    .then(resp => resp.json())
-    .then(data => displayBranches(data))
-}
 
-loadBranches()
-
-function displayBranches(branches){
-    branches.forEach(branch => displayBranch(branch));
-}
-
-function displayBranch(branch){
-    const h2 = document.createElement("h2")
-    const p = document.createElement("p")
-    const list = document.createElement("ul")
-    h2.textContent = branch.name 
-    p.textContent = branch.description 
-    branch.philosophers.forEach(philosopher => displayPhilosopher(philosopher))
-    branchDiv().appendChild(h2)
-    branchDiv().appendChild(p)
-    branchDiv().appendChild(list)
+API.loadBranches()
 
 
-    function displayPhilosopher(philosopher){
-        const li = document.createElement('h3')
-        li.textContent = philosopher.name 
-        list.appendChild(li)
-        const opt = document.createElement('option')
-        opt.innerText = philosopher.name 
-        opt.value = philosopher.id
-        dropDown().appendChild(opt)}
-}
+
 
 noteForm().addEventListener("submit", addNote)
 notes().addEventListener("click", fetchNotes)
