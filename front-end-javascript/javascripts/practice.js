@@ -62,10 +62,6 @@ function addNote(e){
         new Note(obj.content, obj.philosopher)
         displayNote(obj)
         clearForm()
-        //debugger
-        //let p = document.createElement('p')
-        //p.innerText = obj.content 
-        //noteCont().appendChild(p)
     })
 }
 
@@ -100,7 +96,19 @@ function displayNote(note){
     p.innerText = `Did you know this about ${note.philosopher.name}?\n` + note.content + '\n'
     noteCont().appendChild(p)
     let button = document.createElement('button')
+    p.appendChild(button)
     button.textContent = "I know this already"
     button.classList.add('btn')
-    p.appendChild(button)
+    button.id = note.id 
+    button.addEventListener("click", deleteNote)
+}
+
+function deleteNote(e){
+    fetch("http://localhost:3000/notes/" + this.id, {
+        method: "delete"
+    })
+    .then(resp => resp.json())
+    .then(data => {
+        this.parentNode.remove();
+    })
 }

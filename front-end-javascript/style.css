@@ -18,6 +18,7 @@ h2 {
 .btn {
   transition-duration: 0.4s;
   border-color: mediumslateblue;
+  background-color:peru;
 }
 
 .btn:hover {
