@@ -38,8 +38,17 @@ function displayBranch(branch){
         dropDown().appendChild(opt)}
 }
 
-
 noteForm().addEventListener("submit", addNote)
+notes().addEventListener("click", fetchNotes)
+
+function clearNotes(){
+    noteCont().innerHTML = "" 
+}
+
+function clearForm(){
+    document.querySelector("#note-content").value = ""
+    document.querySelector("#philosopher-dropdown").value = "Select Philosopher"
+}
 
 
 function addNote(e){
@@ -59,14 +68,11 @@ function addNote(e){
     })
     .then(resp => resp.json())
     .then(obj => {
-        new Note(obj.content, obj.philosopher)
-        displayNote(obj)
+        let note = new Note(obj.content, obj.philosopher, obj.id)
+        note.display()
         clearForm()
     })
 }
-
-
-notes().addEventListener("click", fetchNotes)
 
 
 function fetchNotes(){
@@ -74,34 +80,12 @@ function fetchNotes(){
     .then(resp => resp.json())
     .then(data => {
         clearNotes()
-        displayNotes(data)
+        Note.createNotes(data)
+        Note.displayNotes(data)
 })
 }
 
-function displayNotes(notes){
-    notes.forEach(note => displayNote(note))
-}
 
-function clearNotes(){
-    noteCont().innerHTML = "" 
-}
-
-function clearForm(){
-    document.querySelector("#note-content").value = ""
-    document.querySelector("#philosopher-dropdown").value = "Select Philosopher"
-}
-
-function displayNote(note){
-    let p = document.createElement("p")
-    p.innerText = `Did you know this about ${note.philosopher.name}?\n` + note.content + '\n'
-    noteCont().appendChild(p)
-    let button = document.createElement('button')
-    p.appendChild(button)
-    button.textContent = "I know this already"
-    button.classList.add('btn')
-    button.id = note.id 
-    button.addEventListener("click", deleteNote)
-}
 
 function deleteNote(e){
     fetch("http://localhost:3000/notes/" + this.id, {
