@@ -14,3 +14,13 @@ h1 {
 h2 {
   color: goldenrod;
 }
+
+.btn {
+  transition-duration: 0.4s;
+  border-color: mediumslateblue;
+}
+
+.btn:hover {
+  background-color: deeppink;
+  color: whitesmoke;
+}

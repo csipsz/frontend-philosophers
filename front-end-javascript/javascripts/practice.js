@@ -97,6 +97,10 @@ function clearForm(){
 
 function displayNote(note){
     let p = document.createElement("p")
-    p.innerText = note.content + ` about ${note.philosopher.name}`
+    p.innerText = `Did you know this about ${note.philosopher.name}?\n` + note.content + '\n'
     noteCont().appendChild(p)
+    let button = document.createElement('button')
+    button.textContent = "I know this already"
+    button.classList.add('btn')
+    p.appendChild(button)
 }
