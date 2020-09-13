@@ -20,7 +20,7 @@ class Note {
         button.textContent = "I know this already"
         button.classList.add('btn')
         button.id = this.id 
-        button.addEventListener("click", deleteNote)
+        button.addEventListener("click", API.deleteNote)
     }
 
 
