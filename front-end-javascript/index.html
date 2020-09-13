@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hi</h1>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <h1>WHITE DOVE PHILOSOPHER STUDY GROUP</h1>
 
     <form id="note-submit">
         <label for="note-content">ADD NOTE</label>
           <textarea type="text" name="note-content" id="note-content"></textarea>
-          <select id="philosopher-dropdown"></select>
-          <label for="philosopher-dropdown">CHOOSE PHILOSOPHER</label>
+          <select id="philosopher-dropdown" >
+              <option>Select Philosopher</option>
+          </select>
           <input type="submit" value="SHARE" class="btn">
       </form>
    
@@ -20,9 +22,11 @@
         
     </div>
 
-    <div id="note-container"></div>
+    <div id="note-container">
+        <h1 id="notes">NOTES</h1>
+    </div>
     <script src="javascripts/note.js" defer></script>
-    <script src="javascripts/index.js" defer></script>
+    <script src="javascripts/practice.js" defer></script>
 
 </body>
 </html>

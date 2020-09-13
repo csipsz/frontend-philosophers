@@ -2,6 +2,7 @@ let branchDiv = () => document.querySelector("#branches")
 let dropDown = () => document.querySelector("#philosopher-dropdown")
 let noteForm = () => document.querySelector('#note-submit')
 let noteCont = () => document.querySelector("#note-container")
+let notes = () => document.querySelector("#notes")
 
 function loadBranches(){
     fetch("http://localhost:3000/branches")
@@ -19,7 +20,7 @@ function displayBranches(branches){
         h2.textContent = branch.name 
         p.textContent = branch.description 
         branch.philosophers.forEach(philosopher => {
-            const li = document.createElement('li')
+            const li = document.createElement('h3')
             li.textContent = philosopher.name 
             list.appendChild(li)
             const opt = document.createElement('option')
@@ -64,3 +65,28 @@ function addNote(e){
     })
 }
 
+
+notes().addEventListener("click", fetchNotes)
+
+
+function fetchNotes(){
+    fetch("http://localhost:3000/notes")
+    .then(resp => resp.json())
+    .then(data => {
+        clearNotes()
+        displayNotes(data)
+})
+}
+
+function displayNotes(notes){
+    notes.forEach(note => {
+        let p = document.createElement("p")
+        p.innerText = note.content + ` about ${note.philosopher.name}`
+        noteCont().appendChild(p)
+    })
+
+}
+
+function clearNotes(){
+    noteCont().innerHTML = "" 
+}
