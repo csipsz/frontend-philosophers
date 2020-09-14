@@ -38,17 +38,17 @@ class Branch {
         const list = document.createElement("ul")
         h2.textContent = this.name 
         p.textContent = this.description 
+        p.classList.add('.info')
         this.philosophers.forEach(philosopher => displayPhilosopher.call(philosopher))
         branchDiv().appendChild(h2)
         branchDiv().appendChild(p)
         branchDiv().appendChild(list)    
         
         function displayPhilosopher(){
-            const li = document.createElement('h2')
-            //li.classList.add('btn')
-            li.textContent = this.name 
-            list.appendChild(li)
-            li.addEventListener('click', this.show)
+            const h2 = document.createElement('h2')
+            h2.textContent = this.name 
+            list.appendChild(h2)
+            h2.addEventListener('click', this.show)
         }
     }
 }
