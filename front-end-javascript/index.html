@@ -3,11 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Philosophy Database</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-    <h1>PHILOSOPHER DATABASE</h1>
+    <h1>THE FRONT END PHILOSOPHERS</h1>
+    
+
     <form id="note-submit">
         <label for="note-content"></label><br>
           <textarea type="text" name="note-content" id="note-content"></textarea><br>
@@ -16,14 +18,15 @@
           </select><br><br>
           <input type="submit" value="SHARE" class="btn">
       </form>
-   
-    <div id="branches"> 
-        
-    </div>
 
-    <div id="note-container">
+      <div id="branches"></div>
+      <div id="note-container">
         <h1 id="notes">NOTES</h1>
-    </div>
+      </div>
+
+   
+
+
     <script src="javascripts/philosopher.js" defer></script>
     <script src="javascripts/api.js" defer></script>
     <script src="javascripts/branch.js" defer></script>
