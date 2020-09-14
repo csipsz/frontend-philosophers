@@ -11,6 +11,7 @@ class Note {
         Note.all.forEach(note => note.display())
     }
 
+
     static deletejsNote(button){
         // button id is string note id is number, so loose equality operator is better cause I want the type coercion (so lazy)
         Note.all = Note.all.filter(note => note.id != button.id)
