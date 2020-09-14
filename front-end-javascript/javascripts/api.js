@@ -63,7 +63,7 @@ class API {
     }
 
     static clearForm(){
-        document.querySelector("#note-content").value = "ADD YOUR COMMENT"
+        document.querySelector("#note-content").value = "ADD YOUR NOTE"
         document.querySelector("#philosopher-dropdown").value = "Select Philosopher"
     }
 

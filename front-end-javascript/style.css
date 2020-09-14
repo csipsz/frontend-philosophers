@@ -8,10 +8,12 @@ h1 {
   text-align: center;
 }
 
+/*
 .clickable {
   color: whitesmoke;
 
 }
+*/
 
 .clickable:hover {
   background-color: goldenrod;
@@ -24,6 +26,10 @@ h1 {
 }
 
 h2 {
+  color: goldenrod;
+}
+
+.clickonce:hover {
   color: goldenrod;
 }
 

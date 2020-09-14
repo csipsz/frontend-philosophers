@@ -26,6 +26,7 @@ class Philosopher {
     show(){
         //my this is the header element with the philosophers's name, so I can find my object after it
         let philosopher = Philosopher.all.find(philosopher => philosopher.name === this.textContent)
+        this.classList.remove('clickonce')
         let div = document.createElement('div')
         div.classList.add('info')
         for (const key in philosopher){
