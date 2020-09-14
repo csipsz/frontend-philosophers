@@ -6,16 +6,10 @@ let notes = () => document.querySelector("#notes")
 
 API.loadBranches()
 
-
-
 noteForm().addEventListener("submit", API.addNote)
 notes().addEventListener("click", API.fetchNotes)
 
-function clearNotes(){
-    noteCont().innerHTML = "" 
-}
 
-function clearForm(){
-    document.querySelector("#note-content").value = ""
-    document.querySelector("#philosopher-dropdown").value = "Select Philosopher"
-}
+
+
+

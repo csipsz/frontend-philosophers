@@ -15,7 +15,7 @@ class API {
         fetch("http://localhost:3000/notes")
         .then(resp => resp.json())
         .then(data => {
-            clearNotes()
+            API.clearNotes()
             Note.createNotes(data)
             Note.displayNotes(data)
     })
@@ -41,7 +41,7 @@ class API {
         .then(obj => {
             let note = new Note(obj.content, obj.philosopher, obj.id)
             note.display()
-            clearForm()
+            API.clearForm()
         })
     }
 
@@ -56,6 +56,15 @@ class API {
             Note.deletejsNote(this)
             this.parentNode.remove();
         })
+    }
+
+    static clearNotes(){
+        noteCont().innerHTML = "" 
+    }
+
+    static clearForm(){
+        document.querySelector("#note-content").value = ""
+        document.querySelector("#philosopher-dropdown").value = "Select Philosopher"
     }
 
 }
