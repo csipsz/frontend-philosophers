@@ -40,7 +40,7 @@ h2 {
   color: goldenrod;
   padding: 50px;
   font-size: 20px;
-  background-color: cornflowerblue;
+  background-color: cornflowerblue
 }
 
 
@@ -54,4 +54,20 @@ h2 {
   font-size: 15px;
   padding: 5px;
   color:black ;
+}
+
+.error {
+  background-color: brown;
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  color: aliceblue;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.comment {
+  color: deepskyblue;
+  font-weight: 900;
+  font-size: large;
 }

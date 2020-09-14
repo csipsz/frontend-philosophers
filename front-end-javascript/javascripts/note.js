@@ -22,6 +22,7 @@ class Note {
         noteCont().appendChild(p)
         if (this.philosopher){
         p.innerText = `Did you know this about ${this.philosopher.name}?\n` + this.content + '\n'
+        p.classList.add('comment')
         let button = document.createElement('button')
         p.appendChild(button)
         button.textContent = "I know this already"
@@ -30,7 +31,8 @@ class Note {
         button.addEventListener("click", API.deleteNote)
         } else {
             Note.deletejsNote(this)
-            p.textContent = "YOU NEED A PHILOSOPHER"
+            p.textContent = "PLEASE ADD A PHILOSOPHER"
+            p.classList.add("error")
             setTimeout(function(){ p.parentNode.removeChild(p) }, 5000);
         }
     }

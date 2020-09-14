@@ -38,7 +38,7 @@ class Branch {
         const list = document.createElement("ul")
         h2.textContent = this.name 
         p.textContent = this.description 
-        p.classList.add('.info')
+        p.style.fontSize = '20px'
         this.philosophers.forEach(philosopher => displayPhilosopher.call(philosopher))
         branchDiv().appendChild(h2)
         branchDiv().appendChild(p)
