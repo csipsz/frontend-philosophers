@@ -8,6 +8,16 @@ h1 {
   text-align: center;
 }
 
+.clickable {
+  color: whitesmoke;
+
+}
+
+.clickable:hover {
+  background-color: goldenrod;
+
+}
+
 #branches {
   background-color: darkslateblue;
   padding: 40px;
@@ -88,4 +98,8 @@ h2 {
 
 #notes { 
   margin: 10px;
+}
+
+#notes:hover {
+  color: goldenrod;
 }

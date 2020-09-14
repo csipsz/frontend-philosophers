@@ -25,6 +25,7 @@ class Branch {
         div.appendChild(h1)
         branchDiv().appendChild(div)
         h1.textContent = this.name 
+        h1.classList.add("clickable")
         // I think binding this to dislay here is a bit harsh
         h1.addEventListener('click', this.display.bind(this))
     }
@@ -45,10 +46,11 @@ class Branch {
         branchDiv().appendChild(list)    
         
         function displayPhilosopher(){
-            const h2 = document.createElement('h2')
-            h2.textContent = this.name 
-            list.appendChild(h2)
-            h2.addEventListener('click', this.show)
+            const h3 = document.createElement('h3')
+            h3.textContent = this.name 
+            list.appendChild(h3)
+            h3.classList.add("clickable")
+            h3.addEventListener('click', this.show)
         }
     }
 }
