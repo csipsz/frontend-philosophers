@@ -16,16 +16,28 @@ class Branch {
     )}
 
     static displayBranches(){
-        Branch.all.forEach(branch => branch.display());
+        Branch.all.forEach(branch => branch.showCard());
+    }
+
+    showCard(){
+        const div = document.createElement('div')
+        const h1 = document.createElement('h1')
+        div.appendChild(h1)
+        branchDiv().appendChild(div)
+        h1.textContent = this.name 
+        h1.addEventListener('click', this.display.bind(this))
     }
 
     
     display(){
+        branchDiv().innerHTML = ""
+        Branch.displayBranches()
         const h2 = document.createElement("h2")
         const p = document.createElement("p")
         const list = document.createElement("ul")
         h2.textContent = this.name 
         p.textContent = this.description 
+        console.log(this)
         this.philosophers.forEach(philosopher => displayPhilosopher.call(philosopher))
         branchDiv().appendChild(h2)
         branchDiv().appendChild(p)
@@ -35,10 +47,11 @@ class Branch {
             const li = document.createElement('h3')
             li.textContent = this.name 
             list.appendChild(li)
-            const opt = document.createElement('option')
-            opt.innerText = this.name 
-            opt.value = this.id
-            dropDown().appendChild(opt)
+            
+            // const opt = document.createElement('option')
+            // opt.innerText = this.name 
+            // opt.value = this.id
+            // dropDown().appendChild(opt)
         }
     }
 }

@@ -12,4 +12,15 @@ class Philosopher {
         Philosopher.all.push(this)
     }
 
+
+    static fillDropDown(){
+        Philosopher.all.forEach(philosopher => philosopher.addToDropDown())
+    }
+        addToDropDown(){
+            const opt = document.createElement('option')
+            opt.innerText = this.name 
+            opt.value = this.id
+            dropDown().appendChild(opt)
+        }
+
 }

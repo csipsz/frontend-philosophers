@@ -6,6 +6,7 @@ class API {
         .then(data => {
             Branch.createBranches(data)
             Branch.displayBranches(data)
+            Philosopher.fillDropDown()
         })
     }
 
