@@ -19,14 +19,20 @@ class Note {
 
     display(){
         let p = document.createElement("p")
-        p.innerText = `Did you know this about ${this.philosopher.name}?\n` + this.content + '\n'
         noteCont().appendChild(p)
+        if (this.philosopher){
+        p.innerText = `Did you know this about ${this.philosopher.name}?\n` + this.content + '\n'
         let button = document.createElement('button')
         p.appendChild(button)
         button.textContent = "I know this already"
         button.classList.add('btn')
         button.id = this.id 
         button.addEventListener("click", API.deleteNote)
+        } else {
+            Note.deletejsNote(this)
+            p.textContent = "YOU NEED A PHILOSOPHER"
+            setTimeout(function(){ p.parentNode.removeChild(p) }, 5000);
+        }
     }
 
 

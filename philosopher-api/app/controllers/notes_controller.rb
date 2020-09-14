@@ -12,7 +12,11 @@ class NotesController < ApplicationController
 
     def create 
         note = Note.create(note_params)
-        render json: note, include: [:philosopher]
+        if note.save
+            render json: note, include: [:philosopher]
+        else 
+            render json: note.errors.full_messages 
+        end 
     end 
 
     def destroy 
