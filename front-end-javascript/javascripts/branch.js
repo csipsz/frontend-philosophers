@@ -25,6 +25,7 @@ class Branch {
         div.appendChild(h1)
         branchDiv().appendChild(div)
         h1.textContent = this.name 
+        // I think binding this to dislay here is a bit harsh
         h1.addEventListener('click', this.display.bind(this))
     }
 
@@ -37,7 +38,6 @@ class Branch {
         const list = document.createElement("ul")
         h2.textContent = this.name 
         p.textContent = this.description 
-        console.log(this)
         this.philosophers.forEach(philosopher => displayPhilosopher.call(philosopher))
         branchDiv().appendChild(h2)
         branchDiv().appendChild(p)
@@ -47,11 +47,6 @@ class Branch {
             const li = document.createElement('h3')
             li.textContent = this.name 
             list.appendChild(li)
-            
-            // const opt = document.createElement('option')
-            // opt.innerText = this.name 
-            // opt.value = this.id
-            // dropDown().appendChild(opt)
         }
     }
 }
