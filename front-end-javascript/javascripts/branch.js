@@ -44,7 +44,8 @@ class Branch {
         branchDiv().appendChild(list)    
         
         function displayPhilosopher(){
-            const li = document.createElement('h3')
+            const li = document.createElement('div')
+            //li.classList.add('btn')
             li.textContent = this.name 
             list.appendChild(li)
             li.addEventListener('click', this.show)

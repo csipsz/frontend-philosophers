@@ -1,5 +1,6 @@
 body {
-  background-color: hotpink;
+  background-color: grey;
+  padding: 15px;
 }
 
 h1 {
@@ -19,28 +20,17 @@ h2 {
   transition-duration: 0.4s;
   border-color: mediumslateblue;
   background-color:peru;
+  width: 100px;
 }
 
 .btn:hover {
   background-color: deeppink;
   color: whitesmoke;
 }
-/*
+
 #note-submit {
-  font-size: 30px;
-  font-style: unset;
-}
-
-#sziacica {
   text-align: center;
-  padding: 5%;
 }
-
-#note-content {
-  padding: 10%;
-  border-radius: 50%;
-}
-*/
 
 .secret {
   background-color:deepskyblue;
