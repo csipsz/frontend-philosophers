@@ -41,3 +41,9 @@ h2 {
   border-radius: 50%;
 }
 */
+
+.secret {
+  background-color:deepskyblue;
+  font-size: 15px;
+  padding: 5px;
+}

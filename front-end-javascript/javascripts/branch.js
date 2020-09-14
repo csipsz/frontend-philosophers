@@ -47,6 +47,7 @@ class Branch {
             const li = document.createElement('h3')
             li.textContent = this.name 
             list.appendChild(li)
+            li.addEventListener('click', this.show)
         }
     }
 }
