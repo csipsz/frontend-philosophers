@@ -52,6 +52,7 @@ class API {
         })
         .then(resp => resp.json())
         .then(data => {
+            Note.deletejsNote(this)
             this.parentNode.remove();
         })
     }

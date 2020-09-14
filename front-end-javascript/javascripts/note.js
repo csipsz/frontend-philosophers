@@ -10,7 +10,13 @@ class Note {
     static displayNotes(){
         Note.all.forEach(note => note.display())
     }
-    
+
+    static deletejsNote(button){
+        // button id is string note id is number, so loose equality operator is better cause I want the type coercion (so lazy)
+        Note.all = Note.all.filter(note => note.id != button.id)
+        return Note.all
+    }
+
     display(){
         let p = document.createElement("p")
         p.innerText = `Did you know this about ${this.philosopher.name}?\n` + this.content + '\n'
