@@ -30,13 +30,15 @@ class Philosopher {
         let div = document.createElement('div')
         div.classList.add('info')
         for (const key in philosopher){
-            if (key !== "id"){
+            if (key !== "id" && key !== "birthdate"){
                 let p = document.createElement('p')
                 p.textContent = philosopher[key]
                 div.appendChild(p)
             }
         }
-       
+        let p = document.createElement('p')
+        p.textContent = `He was born on ${philosopher.birthdate}.`
+        div.appendChild(p)
         this.appendChild(div)
     }
 

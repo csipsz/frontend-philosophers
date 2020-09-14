@@ -22,7 +22,7 @@ class Note {
         let p = document.createElement("p")
         noteCont().appendChild(p)
         if (this.philosopher){
-        p.innerText = `Did you know this about ${this.philosopher.name}?\n` + this.content + '\n'
+        p.innerText = `About ${this.philosopher.name}\n` + this.content + '\n'
         p.classList.add('comment')
         let button = document.createElement('button')
         p.appendChild(button)
