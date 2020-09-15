@@ -14,6 +14,10 @@ let colorOptions = [ "DarkSlateBlue", "Plum", "Deeppink", "Teal", "FireBrick", "
 "OliveDrab", "SteelBlue", "Sienna", "PeachPuff", "Olive", "OrangeRed", "PaleGreen", 
 "RosyBrown", "PaleVioletRed", "Fuchsia", "DarkGreen", "DarkTurquoise"]
 
+let nameOptions = ["Default", "Good Girl", "Bad Girl", "Manly", "Fire", "Cloudless Sky", "Navy", 
+"Olive Tree", "Blizzard", "Campfire", "PeachPuff", "Mature", "Racecar", "Flying Lotus", 
+"Seashell", "Flesh wound", "YOLO", "Potion", "Waves"]
+
 addStylebuttons()
 
 function addStylebuttons(){
@@ -26,6 +30,7 @@ function addStylebuttons(){
         changeColor(el)
         })
     }
+    nameGenerator()
 }
 
 function changeColor(color){
@@ -37,14 +42,13 @@ function changeColor(color){
 }
 
 
+function nameGenerator(){
 let styleButtons = () => document.querySelectorAll(".style")
 let stylearray = Array.from(styleButtons())
-let nameOptions = ["Default", "Good Girl", "Bad Girl", "Manly", "Fire", "Cloudless Sky", "Navy", 
-"Olive Tree", "Blizzard", "Campfire", "PeachPuff", "Mature", "Racecar", "Flying Lotus", 
-"Seashell", "Flesh wound", "YOLO", "Potion", "Waves"]
 
 for (let i = 0;  i < nameOptions.length; i++){
     stylearray[i].textContent = nameOptions[i]
+}
 }
 
 ///////////////////////////////////////////////////////////////////////
