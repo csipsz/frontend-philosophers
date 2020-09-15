@@ -37,6 +37,7 @@ run <b>http-server</b> in your terminal
 <b>OR ON WINDOWS:</b>
 
 Right click the index.html file to reveal it in the explorer 
+
 Right click the file and select the open with... option 
 
 Select the browser that you would like use
