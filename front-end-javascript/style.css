@@ -8,16 +8,16 @@ h1 {
   text-align: center;
 }
 
-/*
-.clickable {
-  color: whitesmoke;
-
+h2 {
+  color: goldenrod;
 }
-*/
 
 .clickable:hover {
   background-color: goldenrod;
+}
 
+.clickonce:hover {
+  color: goldenrod;
 }
 
 #branches {
@@ -25,18 +25,11 @@ h1 {
   padding: 40px;
 }
 
-h2 {
-  color: goldenrod;
-}
-
-.clickonce:hover {
-  color: goldenrod;
-}
-
 .btn {
   transition-duration: 0.4s;
   border-color: mediumslateblue;
   background-color:peru;
+  font-weight: bold;
   padding: 3px;
   margin: 10px;
 }
@@ -46,8 +39,18 @@ h2 {
   color: whitesmoke;
 }
 
-#note-submit {
-  text-align: left;
+.style {
+  transition-duration: 0.4s;
+  border-color: mediumslateblue;
+  background-color:peru;
+  padding: 5px;
+  margin: 7px;
+  font-weight: bold;
+}
+
+.style:hover {
+  background-color: deeppink;
+  color: whitesmoke;
 }
 
 #note-content {
@@ -87,7 +90,7 @@ h2 {
 }
 
 .comment {
-  color: rgb(248, 17, 198);
+  color: whitesmoke;
   font-weight: 900;
   font-size: large;
   margin: 10px;

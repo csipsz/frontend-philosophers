@@ -60,6 +60,7 @@ class API {
 
     static clearNotes(){
         noteCont().innerHTML = "" 
+        
     }
 
     static clearForm(){
