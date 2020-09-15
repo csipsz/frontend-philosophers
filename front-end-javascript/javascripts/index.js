@@ -9,7 +9,7 @@ API.loadBranches()
 noteForm().addEventListener("submit", API.addNote)
 notes().addEventListener("click", API.fetchNotes)
 
-////////////////SILLY FUNCTION STYLING TRIO /////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////// COLORSTYLING FUNCTION GROUP /////////////////////////////////////////////////////////////////////////////////////////////////
 let colorOptions = [ "DarkSlateBlue", "Plum", "Deeppink", "Teal", "FireBrick", "Deepskyblue", "Navy",
 "OliveDrab", "SteelBlue", "Sienna", "PeachPuff", "Olive", "OrangeRed", "PaleGreen", 
 "RosyBrown", "PaleVioletRed", "Fuchsia", "DarkGreen", "DarkTurquoise"]

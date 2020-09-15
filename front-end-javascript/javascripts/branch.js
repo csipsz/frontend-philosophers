@@ -26,7 +26,6 @@ class Branch {
         branchDiv().appendChild(div)
         h1.textContent = this.name 
         h1.classList.add("clickable")
-        // I think binding this to dislay here is a bit harsh
         h1.addEventListener('click', this.display.bind(this))
     }
 
