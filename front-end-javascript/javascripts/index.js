@@ -36,9 +36,11 @@ function addStylebuttons(){
 function changeColor(color){
     branchDiv().style.backgroundColor = color
     dropDown().style.backgroundColor = color
+    if (notes()){
     notes().style.backgroundColor = color
     notes().style.margin = "0px"
     notes().style.padding = "4px"
+    }
 }
 
 
