@@ -9,7 +9,7 @@ API.loadBranches()
 noteForm().addEventListener("submit", API.addNote)
 notes().addEventListener("click", API.fetchNotes)
 
-////////////////SILLY FUNCTION STYLING TRIO ///////////////////
+////////////////SILLY FUNCTION STYLING TRIO /////////////////////////////////////////////////////////////////////////////////////////////////
 let colorOptions = [ "DarkSlateBlue", "Plum", "Deeppink", "Teal", "FireBrick", "Deepskyblue", "Navy",
 "OliveDrab", "SteelBlue", "Sienna", "PeachPuff", "Olive", "OrangeRed", "PaleGreen", 
 "RosyBrown", "PaleVioletRed", "Fuchsia", "DarkGreen", "DarkTurquoise"]
@@ -38,7 +38,7 @@ function changeColor(color){
     dropDown().style.backgroundColor = color
     notes().style.backgroundColor = color
     notes().style.margin = "0px"
-    notes().style.padding = "5px"
+    notes().style.padding = "4px"
 }
 
 
@@ -51,7 +51,7 @@ for (let i = 0;  i < nameOptions.length; i++){
 }
 }
 
-///////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
