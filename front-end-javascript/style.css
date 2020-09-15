@@ -23,6 +23,8 @@ h2 {
 #branches {
   background-color: darkslateblue;
   padding: 40px;
+  border-color: black;
+  border-style: double;
 }
 
 .btn {
