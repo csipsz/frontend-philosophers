@@ -8,7 +8,7 @@ I USED THE STANFORD ENCYCLOPEDIA OF PHILOSOPHY and WIKIPEDIA for most of my seed
 <b>SO THE INTELLECTUAL PROPERTY BELONGS TO THEM.</b>
 
 
-Use it only locally, or please create your own seed data for it. 
+Use it only locally, or please create your own seed data. 
 
 <h1>INSTRUCTIONS:</h1> 
 
@@ -28,7 +28,7 @@ This will boot up the Rails web server at http://localhost:3000.
 
 <h2>The JAVASCRIPT FRONT END:</h2>
 
-Install <b>http-server<b>
+Install <b>http-server</b>
 
 Navigate to the <b>front-end-javascript</b> directory
 
@@ -38,4 +38,5 @@ run <b>http-server</b> in your terminal
 
 Right click the index.html file to reveal it in the explorer 
 Right click the file and select the open with... option 
+
 Select the browser that you would like use
