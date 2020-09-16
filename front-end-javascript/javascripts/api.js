@@ -1,7 +1,9 @@
 class API {
 
+    static BASEURL = "http://localhost:3000/"
+
     static loadBranches(){
-        fetch("http://localhost:3000/branches")
+        fetch(API.BASEURL + "branches")
         .then(resp => resp.json())
         .then(data => {
             Branch.createBranches(data)
@@ -12,7 +14,7 @@ class API {
 
 
     static fetchNotes(){
-        fetch("http://localhost:3000/notes")
+        fetch(API.BASEURL + "notes")
         .then(resp => resp.json())
         .then(data => {
             design.clearNotes()
@@ -24,7 +26,7 @@ class API {
 
     static addNote(e){
         e.preventDefault()
-        fetch("http://localhost:3000/notes", {
+        fetch(API.BASEURL + "notes", {
         method: "POST",
         headers: {
         "Content-Type": "application/json",
@@ -48,7 +50,7 @@ class API {
 
 
     static deleteNote(e){
-        fetch("http://localhost:3000/notes/" + this.id, {
+        fetch(API.BASEURL + "notes/" + this.id, {
             method: "delete"
         })
         .then(resp => resp.json())
