@@ -7,11 +7,19 @@ document.querySelector("#note-content").value = "ADD YOUR NOTE"
 const design = new Design
 
 API.loadBranches()
-noteForm().addEventListener("submit", API.addNote)
-notes().addEventListener("click", API.fetchNotes)
-
-
+API.fetchNotes()
 design.addStylebuttons()
+
+noteForm().addEventListener("submit", API.addNote)
+
+
+notes().addEventListener("click", function(e){
+    design.clearNotes()
+    Note.displayNotes()
+
+})
+
+
 
 
 

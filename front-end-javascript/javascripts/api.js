@@ -12,17 +12,13 @@ class API {
         })
     }
 
-
     static fetchNotes(){
         fetch(API.BASEURL + "notes")
         .then(resp => resp.json())
         .then(data => {
-            design.clearNotes()
             Note.createNotes(data)
-            Note.displayNotes(data)
     })
     }
-
 
     static addNote(e){
         e.preventDefault()
@@ -46,8 +42,6 @@ class API {
             design.clearForm()
         })
     }
-
-
 
     static deleteNote(e){
         fetch(API.BASEURL + "notes/" + this.id, {
