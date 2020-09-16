@@ -12,11 +12,9 @@ design.addStylebuttons()
 
 noteForm().addEventListener("submit", API.addNote)
 
-
 notes().addEventListener("click", function(e){
     design.clearNotes()
     Note.displayNotes()
-
 })
 
 

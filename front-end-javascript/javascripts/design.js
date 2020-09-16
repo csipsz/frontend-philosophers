@@ -42,7 +42,11 @@ class Design {
 
 
     clearNotes(){
-        noteCont().innerHTML = ""    
+        noteCont().innerHTML = "" 
+        let notes = document.createElement("h1")
+        notes.id = "notes"
+        notes.textContent = "NOTES"
+        noteCont().appendChild(notes)
     }
 
     clearForm(){
