@@ -26,7 +26,7 @@ class Philosopher {
 
 
     listPhilosopher(){
-        let list = document.querySelector('#philosopher-list')
+        let list = document.querySelector("#philosopher-list") //having this as an id is not ideal, but with the page flow it always refers to the current one
         const h3 = document.createElement('h3')
         h3.textContent = this.name 
         h3.id = this.name

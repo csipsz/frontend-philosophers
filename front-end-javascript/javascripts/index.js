@@ -15,14 +15,3 @@ design.addStylebuttons()
 noteForm().addEventListener("submit", API.addNote)
 
 Note.toggleNotes()
-
-
-
-
-
-
-
-
-
-
-

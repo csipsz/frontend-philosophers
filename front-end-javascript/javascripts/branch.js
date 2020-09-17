@@ -34,7 +34,7 @@ class Branch {
         const h2 = document.createElement("h2")
         const p = document.createElement("p")
         const list = document.createElement("ul")
-        list.id = 'philosopher-list'
+        list.id = "philosopher-list"
         h2.textContent = this.name 
         p.textContent = this.description 
         p.style.fontSize = '20px'
