@@ -20,10 +20,8 @@ class Branch {
     }
 
     showCard(){
-        const div = document.createElement('div')
         const h1 = document.createElement('h1')
-        div.appendChild(h1)
-        branchDiv().appendChild(div)
+        branchDiv().appendChild(h1)
         h1.textContent = this.name 
         h1.classList.add("clickable")
         h1.addEventListener('click', this.display.bind(this))
