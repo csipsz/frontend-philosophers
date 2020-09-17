@@ -47,6 +47,7 @@ class Branch {
         function displayPhilosopher(){
             const h3 = document.createElement('h3')
             h3.textContent = this.name 
+            h3.id = this.name
             list.appendChild(h3)
             h3.classList.add('clickonce')
             h3.addEventListener('click', this.show)
