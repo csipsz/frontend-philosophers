@@ -15,23 +15,25 @@ class Philosopher {
     static fillDropDown(){
         Philosopher.all.forEach(philosopher => philosopher.addToDropDown())
     }
-        addToDropDown(){
-            const opt = document.createElement('option')
-            opt.innerText = this.name 
-            opt.value = this.id
-            dropDown().appendChild(opt)
-        }
 
 
-        listPhilosopher(){
-            let list = document.querySelector('#philosopher-list')
-            const h3 = document.createElement('h3')
-            h3.textContent = this.name 
-            h3.id = this.name
-            list.appendChild(h3)
-            h3.classList.add('clickonce')
-            h3.addEventListener('click', this.show)
-        }
+    addToDropDown(){
+        const opt = document.createElement('option')
+        opt.innerText = this.name 
+        opt.value = this.id
+        dropDown().appendChild(opt)
+    }
+
+
+    listPhilosopher(){
+        let list = document.querySelector('#philosopher-list')
+        const h3 = document.createElement('h3')
+        h3.textContent = this.name 
+        h3.id = this.name
+        list.appendChild(h3)
+        h3.classList.add('clickonce')
+        h3.addEventListener('click', this.show)
+    }
 
 
     show(){
