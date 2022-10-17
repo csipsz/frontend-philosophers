@@ -1,6 +1,6 @@
 <h1>THE FRONT END PHILOSOPHERS</h1>
 
-This is a JavaScript front end and Rails back end school project for Flatiron School. This app is a studying aid and it helps you organize Philosophers under Branches and add some quick notes. 
+This is a JavaScript front end and Rails back end project. This app is a studying aid and it helps you organize Philosophers under Branches and add some quick notes. 
 
 I USED THE STANFORD ENCYCLOPEDIA OF PHILOSOPHY and WIKIPEDIA for most of my seed data because I am not planning on launching this app in production mode.
 
